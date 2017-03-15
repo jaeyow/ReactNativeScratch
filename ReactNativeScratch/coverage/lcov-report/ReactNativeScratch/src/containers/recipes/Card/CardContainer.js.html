@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ReactNativeScratch/src/containers/recipes/Card/CardContainer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">ReactNativeScratch/src/containers/recipes/Card</a> CardContainer.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.88% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/41</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.13% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Individual Recipe Card Container
+ *
+ * React Native Starter App
+ * https://github.com/mcnamee/react-native-starter-app
+ */
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { Actions } from 'react-native-router-flux';
+&nbsp;
+// Actions
+import * as UserActions from '@redux/user/actions';
+&nbsp;
+// Consts and Libs
+import AppUtil from '@lib/util';
+&nbsp;
+// Components
+import RecipeCardRender from './CardView';
+&nbsp;
+/* Redux ==================================================================== */
+// What data from the store shall we send to the component?
+const mapStateToProps = <span class="fstat-no" title="function not covered" >st</span>ate =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+  user: state.user,
+});
+&nbsp;
+// Any actions to map to the component?
+const mapDispatchToProps = {
+  updateFavourites: UserActions.updateMe,
+};
+&nbsp;
+/* Component ==================================================================== */
+class RecipeCard extends Component {
+  static componentName = 'RecipeCard';
+&nbsp;
+  static propTypes = {
+    recipe: PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.shape({
+        rendered: PropTypes.string,
+      }),
+    }).isRequired,
+    updateFavourites: PropTypes.func.isRequired,
+    user: PropTypes.shape({
+      acf: PropTypes.shape({
+        favourite_recipes: PropTypes.arrayOf(PropTypes.object),
+      }),
+    }),
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >    super(props);</span>
+&nbsp;
+    const recipe = <span class="cstat-no" title="statement not covered" >this.parseRecipeData(props.recipe);</span>
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      recipe,
+    };
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillReceiveProps(props) {
+<span class="cstat-no" title="statement not covered" >    if (props.recipe) {</span>
+      const recipe = <span class="cstat-no" title="statement not covered" >this.parseRecipeData(props.recipe);</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({ recipe });</span>
+    }
+  }
+&nbsp;
+  /**
+    * On Press of Card
+    */
+  onPressCard = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    Actions.recipeView({</span>
+      title: this.props.recipe.title.rendered,
+      recipe: this.props.recipe,
+    });
+  }
+&nbsp;
+  /**
+    * When user taps to favourite a recipe
+    */
+  onPressFavourite = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    const recipeId = <span class="cstat-no" title="statement not covered" >this.props.recipe.id;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (recipeId &amp;&amp; this.props.updateFavourites) {</span>
+      const favs = <span class="cstat-no" title="statement not covered" >(</span>
+        this.props.user &amp;&amp; this.props.user.acf &amp;&amp;
+        this.props.user.acf.favourite_recipes
+      )
+        ? this.props.user.acf.favourite_recipes
+        : null;
+&nbsp;
+      // Build Payload - Update current user favourites
+      // Payload should be:
+      //   {fields: {favourite_recipes: [{recipe_id: 43}, {recipe_id: 44}]}}
+      const arrIdx = <span class="cstat-no" title="statement not covered" >this.isFavourite();</span>
+&nbsp;
+      // Remove from current list
+<span class="cstat-no" title="statement not covered" >      if (arrIdx) <span class="cstat-no" title="statement not covered" >favs.splice(arrIdx, 1);</span></span>
+      // Add to current list
+      else <span class="cstat-no" title="statement not covered" >favs.push({ recipe_id: recipeId });</span>
+&nbsp;
+      // Send new list to API
+<span class="cstat-no" title="statement not covered" >      this.props.updateFavourites({ fields: { favourite_recipes: favs } });</span>
+    }
+  }
+&nbsp;
+  /**
+    * Data from API is a bit messy - clean it up here
+    */
+  parseRecipeData = <span class="fstat-no" title="function not covered" >(d</span>ata) =&gt; {
+    const recipe = <span class="cstat-no" title="statement not covered" >data;</span>
+    const { title, content } = <span class="cstat-no" title="statement not covered" >data;</span>
+    const featuredImg = <span class="cstat-no" title="statement not covered" >data.better_featured_image;</span>
+<span class="cstat-no" title="statement not covered" >    title.rendered = AppUtil.htmlEntitiesDecode(title.rendered);</span>
+&nbsp;
+    // Produce a summary
+<span class="cstat-no" title="statement not covered" >    content.rendered = AppUtil.htmlEntitiesDecode(content.rendered);</span>
+<span class="cstat-no" title="statement not covered" >    content.rendered = AppUtil.stripTags(content.rendered);</span>
+    const summary = <span class="cstat-no" title="statement not covered" >AppUtil.limitChars(content.rendered, 60);</span>
+&nbsp;
+    // Is there a better way to test this?
+<span class="cstat-no" title="statement not covered" >    recipe.featured_image = (</span>
+      featuredImg &amp;&amp;
+      featuredImg.media_details &amp;&amp;
+      featuredImg.media_details.sizes &amp;&amp;
+      featuredImg.media_details.sizes.medium &amp;&amp;
+      featuredImg.media_details.sizes.medium.source_url
+    ) ?
+      featuredImg.media_details.sizes.medium.source_url : '';
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      image: recipe.featured_image,
+      title: title.rendered,
+      content: summary,
+    };
+  }
+&nbsp;
+  /**
+    * Check in Redux to find if this Recipe ID is a Favourite
+    */
+  isFavourite = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    const { user, recipe } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (recipe &amp;&amp; recipe.id) {</span>
+<span class="cstat-no" title="statement not covered" >      if (user &amp;&amp; user.acf &amp;&amp; user.acf.favourite_recipes) {</span>
+        const recipeId = <span class="cstat-no" title="statement not covered" >recipe.id;</span>
+        const favs = <span class="cstat-no" title="statement not covered" >user.acf.favourite_recipes;</span>
+&nbsp;
+        // Return true if this recipe is in favourites list
+        let result = <span class="cstat-no" title="statement not covered" >false;</span>
+<span class="cstat-no" title="statement not covered" >        favs.forEach(<span class="fstat-no" title="function not covered" >(o</span>bj, key) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          if (String(recipeId) === String(obj.recipe_id)) {</span>
+<span class="cstat-no" title="statement not covered" >            result = key;</span>
+          }
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return result;</span>
+      }
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+  }
+&nbsp;
+  render = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    const { recipe } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const { user } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;RecipeCardRender
+        image={recipe.image}
+        title={recipe.title}
+        content={recipe.content}
+        onPress={this.onPressCard}
+        onPressFavourite={(user &amp;&amp; user.id) ? this.onPressFavourite : null}
+        isFavourite={(user &amp;&amp; user.id &amp;&amp; this.isFavourite()) &amp;&amp; true}
+      /&gt;
+    );
+  }
+}
+&nbsp;
+/* Export Component ==================================================================== */
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeCard);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 16 2017 10:22:43 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

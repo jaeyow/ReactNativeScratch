@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ReactNativeScratch/src/lib/api.jwt.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">ReactNativeScratch/src/lib</a> api.jwt.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/47</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * API JWT Auth Functions
+ *
+ * React Native Starter App
+ * https://github.com/mcnamee/react-native-starter-app
+ */
+ /* global fetch console */
+import { AsyncStorage } from 'react-native';
+import jwtDecode from 'jwt-decode';
+&nbsp;
+// Consts and Libs
+import AppAPI from '@lib/api';
+import { APIConfig } from '@constants/';
+&nbsp;
+export default class JWT {
+  static apiToken = ''
+  apiCredentials = {}
+&nbsp;
+  /**
+    * Authenticate
+    */
+  getToken = <span class="fstat-no" title="function not covered" >cr</span>edentials =&gt; <span class="cstat-no" title="statement not covered" >new Promise(<span class="fstat-no" title="function not covered" >as</span>ync (resolve, reject) =&gt; {</span>
+    // Check any existing tokens - if still valid, use it, otherwise login
+    const apiToken = <span class="cstat-no" title="statement not covered" >this.getStoredToken ? await this.getStoredToken() : false;</span>
+<span class="cstat-no" title="statement not covered" >    if (apiToken) <span class="cstat-no" title="statement not covered" >return resolve(apiToken);</span></span>
+&nbsp;
+    // Use credentials or AsyncStore Creds?
+<span class="cstat-no" title="statement not covered" >    if (credentials &amp;&amp; typeof credentials === 'object' &amp;&amp; credentials.username &amp;&amp; credentials.password) {</span>
+<span class="cstat-no" title="statement not covered" >      this.apiCredentials.username = credentials.username;</span>
+<span class="cstat-no" title="statement not covered" >      this.apiCredentials.password = credentials.password;</span>
+&nbsp;
+      // Save new Credentials to AsyncStorage
+<span class="cstat-no" title="statement not covered" >      await AsyncStorage.setItem('api/credentials', JSON.stringify(this.apiCredentials));</span>
+&nbsp;
+    // Check if credentials are in AsyncStorage
+    } else {
+<span class="cstat-no" title="statement not covered" >      await this.getStoredCredentials();</span>
+    }
+&nbsp;
+    // No credentials, we can't do anything
+<span class="cstat-no" title="statement not covered" >    if (!this.apiCredentials || !this.apiCredentials.username || !this.apiCredentials.password) {</span>
+<span class="cstat-no" title="statement not covered" >      return reject({</span>
+        data: { status: 403 },
+        message: 'Credentials missing (JWT.getToken).',
+      });
+    }
+&nbsp;
+    // Let's try logging in
+<span class="cstat-no" title="statement not covered" >    return AppAPI[APIConfig.tokenKey].post(null, {</span>
+      username: this.apiCredentials.username,
+      password: this.apiCredentials.password,
+    }).then(<span class="fstat-no" title="function not covered" >as</span>ync (res) =&gt; {
+<span class="cstat-no" title="statement not covered" >      if (!res.token) {</span>
+<span class="cstat-no" title="statement not covered" >        return reject(res);</span>
+      }
+&nbsp;
+      const tokenIsNowValid = <span class="cstat-no" title="statement not covered" >this.tokenIsValid ? await this.tokenIsValid(res.token) : undefined;</span>
+<span class="cstat-no" title="statement not covered" >      if (!tokenIsNowValid) <span class="cstat-no" title="statement not covered" >return reject(res);</span></span>
+&nbsp;
+      // Set token in AsyncStorage + memory
+<span class="cstat-no" title="statement not covered" >      if (this.storeToken) <span class="cstat-no" title="statement not covered" >await this.storeToken(res.token);</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return resolve(res.token);</span>
+    }).catch(<span class="fstat-no" title="function not covered" >er</span>r =&gt; <span class="cstat-no" title="statement not covered" >reject(err))</span>;
+  })
+&nbsp;
+  /**
+    * Retrieves Token from Storage
+    */
+  getStoredToken = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (!this.apiToken) <span class="cstat-no" title="statement not covered" >this.apiToken = await AsyncStorage.getItem('api/token');</span></span>
+    const validToken = <span class="cstat-no" title="statement not covered" >this.apiToken ? await this.tokenIsValid(this.apiToken) : false;</span>
+<span class="cstat-no" title="statement not covered" >    if (this.apiToken &amp;&amp; !validToken) <span class="cstat-no" title="statement not covered" >this.apiToken = null;</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return this.apiToken;</span>
+  }
+&nbsp;
+  /**
+    * Retrieves Stored Login Credentials from Storage
+    */
+  getStoredCredentials = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+    let storedCredsStr = <span class="cstat-no" title="statement not covered" >'';</span>
+<span class="cstat-no" title="statement not covered" >    if (!this.apiCredentials) <span class="cstat-no" title="statement not covered" >storedCredsStr = await AsyncStorage.getItem('api/credentials');</span></span>
+    const storedCreds = <span class="cstat-no" title="statement not covered" >storedCredsStr ? JSON.parse(storedCredsStr) : false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (storedCreds &amp;&amp; typeof storedCreds === 'object' &amp;&amp; storedCreds.username &amp;&amp; storedCreds.password) {</span>
+<span class="cstat-no" title="statement not covered" >      this.apiCredentials = storedCreds;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return this.apiCredentials;</span>
+  }
+&nbsp;
+  /**
+    * Adds Token to AsyncStorage
+    */
+  storeToken = <span class="fstat-no" title="function not covered" >as</span>ync (token) =&gt; {
+<span class="cstat-no" title="statement not covered" >    await AsyncStorage.setItem('api/token', token);</span>
+<span class="cstat-no" title="statement not covered" >    this.apiToken = token;</span>
+  }
+&nbsp;
+  /**
+    * Deletes Token and saved credentials
+    * Used for logout
+    */
+  deleteToken = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
+<span class="cstat-no" title="statement not covered" >    await AsyncStorage.setItem('api/token', '');</span>
+<span class="cstat-no" title="statement not covered" >    await AsyncStorage.setItem('api/credentials', '');</span>
+<span class="cstat-no" title="statement not covered" >    this.apiToken = '';</span>
+  }
+&nbsp;
+  /**
+    * Tests whether a token is valid
+    */
+  tokenIsValid = <span class="fstat-no" title="function not covered" >(t</span>oken, userId = <span class="branch-0 cbranch-no" title="branch not covered" >null)</span> =&gt; {
+    let decodedToken;
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      decodedToken = jwtDecode(token);</span>
+    } catch (e) {
+      // Decode failed, must be invalid
+<span class="cstat-no" title="statement not covered" >      return false;</span>
+    }
+&nbsp;
+    const NOW = <span class="cstat-no" title="statement not covered" >(Date.now() / 1000) || 0;</span> // current UTC time in whole seconds
+    const eagerRenew = <span class="cstat-no" title="statement not covered" >60;</span> // number of seconds prior to expiry that a token is considered 'old'
+&nbsp;
+    // Validate against 'expiry', 'not before' and 'sub' fields in token
+<span class="cstat-no" title="statement not covered" >    if (NOW &gt; (decodedToken.exp - eagerRenew)) <span class="cstat-no" title="statement not covered" >return false; </span></span>// Expired
+<span class="cstat-no" title="statement not covered" >    if (NOW &lt; decodedToken.nbf - 300) <span class="cstat-no" title="statement not covered" >return false; </span></span>// Not yet valid (too early!)
+&nbsp;
+    // Don't worry about http vs https - strip it out
+    const thisHostname = <span class="cstat-no" title="statement not covered" >APIConfig.hostname.replace(/.*?:\/\//g, '');</span>
+    const tokenHostname = <span class="cstat-no" title="statement not covered" >decodedToken.iss.replace(/.*?:\/\//g, '').substr(0, thisHostname.length);</span>
+<span class="cstat-no" title="statement not covered" >    if (thisHostname !== tokenHostname) {</span>
+<span class="cstat-no" title="statement not covered" >      return false; </span>// Issuing server is different
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (</span>
+      userId &amp;&amp; decodedToken.sub &gt; 0 &amp;&amp;
+      decodedToken.sub !== userId
+    ) {
+<span class="cstat-no" title="statement not covered" >      return false; </span>// Token is for another user
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 16 2017 10:22:43 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
